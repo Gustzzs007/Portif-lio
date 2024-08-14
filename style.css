@@ -1,0 +1,285 @@
+/* Importação de fontes */
+@font-face {
+  font-family: "Agustina Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Agustina Regular"),
+       url("./assets/fonts/Agustina.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+       url("./assets/fonts/Montserrat-Regular.ttf") format("woff");
+}
+
+@font-face {
+  font-family: "Google Sans Regular";
+  src: local("Google Sans Regular"),
+       url("./assets/fonts/GoogleSans-Regular.ttf") format("woff");
+}
+
+/* Estilos globais */
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 1)), 
+              url('./assets/images/space-background.jpg');
+  background-size: cover;
+  color: #c5c6c7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Efeito de fundo fosco */
+section {
+  position: relative;
+  background: rgba(0, 0, 0, 0.7); /* Fundo transparente */
+  backdrop-filter: blur(15px); /* Efeito de desfoque mais forte */
+  border-radius: 15px;
+  padding: 20px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2833;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #32CD99; /* Verde-azulado claro */
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2E8B57; /* Verde-azulado escuro */
+}
+
+/* Cabeçalho */
+.header {
+  background: linear-gradient(145deg, rgba(31, 40, 51, 0.8), rgba(11, 12, 16, 0.8)),
+              url('./assets/images/space-header.jpg');
+  background-size: cover;
+  text-align: center;
+  padding: 150px 20px;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  position: relative;
+  z-index: 1;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0));
+  transform: translateX(-50%);
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.header h1 {
+  font-family: "Agustina Regular", sans-serif;
+  font-size: 3.5rem;
+  color: #32CD99; /* Verde-azulado claro */
+  margin-bottom: 20px;
+}
+
+.header h2 p {
+  font-size: 1.5rem;
+  color: #c5c6c7;
+}
+
+.header .cta, .header .contato, .header .sobre {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.1); /* Fundo mais claro */
+  color: #32CD99; /* Verde-azulado claro */
+  padding: 12px 25px;
+  margin: 10px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(50, 205, 153, 0.3); /* Verde-azulado claro */
+}
+
+.header .cta:hover, .header .contato:hover, .header .sobre:hover {
+  background: rgba(0, 0, 0, 0.3); /* Fundo mais escuro */
+  color: #fff; /* Branco */
+  transform: scale(1.05);
+}
+
+/* Seção de Projetos */
+.projetos {
+  padding: 60px 20px;
+  background-color: rgba(31, 40, 51, 0.8); /* Fundo mais claro com efeito fosco */
+  text-align: center;
+}
+
+.projetos h2 {
+  font-family: "Agustina Regular", sans-serif;
+  font-size: 2.5rem;
+  color: #32CD99; /* Verde-azulado claro */
+  margin-bottom: 40px;
+}
+
+.galeria-projetos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.galeria-projetos .projetos {
+  background: rgba(0, 0, 0, 0.1); /* Fundo mais claro */
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(50, 205, 153, 0.3); /* Verde-azulado claro */
+  padding: 25px;
+  width: 320px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(50, 205, 153, 0.1); /* Verde-azulado claro */
+}
+
+.galeria-projetos .projetos:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(50, 205, 153, 0.5); /* Verde-azulado claro */
+}
+
+.galeria-projetos .projetos img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.galeria-projetos .projetos p {
+  font-size: 1rem;
+  color: #c5c6c7;
+}
+
+/* Seção Sobre Mim */
+.sobre {
+  padding: 60px 20px;
+  background-color: rgba(11, 12, 16, 0.8);
+  text-align: center;
+}
+
+.sobre h2 {
+  font-family: "Agustina Regular", sans-serif;
+  font-size: 2.5rem;
+  color: #32CD99; /* Verde-azulado claro */
+  margin-bottom: 40px;
+}
+
+.bio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 40px;
+}
+
+.bio img {
+  border-radius: 50%;
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(50, 205, 153, 0.3); /* Verde-azulado claro */
+}
+
+.bio nav p {
+  max-width: 500px;
+  font-size: 1rem;
+  color: #c5c6c7;
+}
+
+/* Seção de Habilidades */
+.habilidades {
+  background: rgba(0, 0, 0, 0.05); /* Fundo mais claro */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(50, 205, 153, 0.3); /* Verde-azulado claro */
+  margin-top: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(50, 205, 153, 0.1); /* Verde-azulado claro */
+}
+
+.habilidades h3 {
+  font-family: "Google Sans Regular", sans-serif;
+  font-size: 2rem;
+  color: #32CD99; /* Verde-azulado claro */
+}
+
+.habilidades ul {
+  list-style: none;
+  font-size: 1rem;
+  color: #c5c6c7;
+}
+
+/* Seção de Contato */
+.contato {
+  padding: 60px 20px;
+  background-color: rgba(31, 40, 51, 0.8);
+  text-align: center;
+}
+
+.contato h2 {
+  font-family: "Agustina Regular", sans-serif;
+  font-size: 2.5rem;
+  color: #32CD99; /* Verde-azulado claro */
+  margin-bottom: 20px;
+}
+
+.contato p {
+  font-size: 1.2rem;
+  color: #c5c6c7;
+}
+
+.contato strong {
+  font-weight: bold;
+}
+
+/* Rodapé */
+.footer {
+  background: rgba(11, 12, 16, 0.8);
+  color: #c5c6c7;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer p {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.footer .redes-sociais a {
+  color: #32CD99; /* Verde-azulado claro */
+  margin: 0 10px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer .redes-sociais a:hover {
+  color: #2E8B57; /* Verde-azulado escuro */
+}
+
+/* Media Queries para telas menores */
+@media (max-width: 1380px) {
+  body {
+    font-size: 16px;
+    line-height: normal;
+  }
+}
