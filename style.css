@@ -4,42 +4,47 @@
   font-style: normal;
   font-weight: normal;
   src: local("Agustina Regular"),
-       url("./assets/fonts/Agustina.woff") format("woff");
+    url("./assets/fonts/Agustina.woff") format("woff");
 }
 
 @font-face {
   font-family: "Montserrat";
   src: local("Montserrat"),
-       url("./assets/fonts/Montserrat-Regular.ttf") format("woff");
+    url("./assets/fonts/Montserrat-Regular.ttf") format("woff");
 }
 
 @font-face {
   font-family: "Google Sans Regular";
   src: local("Google Sans Regular"),
-       url("./assets/fonts/GoogleSans-Regular.ttf") format("woff");
+    url("./assets/fonts/GoogleSans-Regular.ttf") format("woff");
 }
 
 /* Estilos globais */
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 1)), 
-              url('./assets/images/space-background.jpg');
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.9), rgb(2,0,36)),
+    url('./assets/images/space-background.jpg');
   background-size: cover;
-  color: #c5c6c7;
+  color: rgb(2,0,36);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   scroll-behavior: smooth;
+
 }
 
 /* Efeito de fundo fosco */
 section {
-  position: relative;
-  background: rgba(0, 0, 0, 0.7); /* Fundo transparente */
-  backdrop-filter: blur(15px); /* Efeito de desfoque mais forte */
+  position: flex;
+  background: rgba(68, 1, 255, 0.7);
+  /* Fundo transparente */
+  backdrop-filter: blur(15px);
+  /* Efeito de desfoque mais forte */
   border-radius: 15px;
   padding: 20px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(162deg, rgba(2, 0, 36, 1) 8%, rgba(29, 9, 121, 1) 56%, rgba(52, 12, 112, 1) 83%);
 }
 
 /* Scrollbar */
@@ -53,24 +58,28 @@ section {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #32CD99; /* Verde-azulado claro */
+  background: #32CD99;
+  /* Verde-azulado claro */
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2E8B57; /* Verde-azulado escuro */
+  background: #2E8B57;
+  /* Verde-azulado escuro */
 }
 
 /* Cabeçalho */
 .header {
   background: linear-gradient(145deg, rgba(31, 40, 51, 0.8), rgba(11, 12, 16, 0.8)),
-              url('./assets/images/space-header.jpg');
+    url('./assets/images/space-header.jpg');
   background-size: cover;
   text-align: center;
   padding: 150px 20px;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   position: relative;
   z-index: 1;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(162deg, rgba(2, 0, 36, 1) 8%, rgba(29, 9, 121, 1) 56%, rgba(52, 12, 112, 1) 83%);
 }
 
 .header::before {
@@ -89,7 +98,8 @@ section {
 .header h1 {
   font-family: "Agustina Regular", sans-serif;
   font-size: 3.5rem;
-  color: #32CD99; /* Verde-azulado claro */
+  color: #32CD99;
+  /* Verde-azulado claro */
   margin-bottom: 20px;
 }
 
@@ -98,10 +108,14 @@ section {
   color: #c5c6c7;
 }
 
-.header .cta, .header .contato, .header .sobre {
+.header .cta,
+.header .contato,
+.header .sobre {
   display: inline-block;
-  background: rgba(0, 0, 0, 0.1); /* Fundo mais claro */
-  color: #32CD99; /* Verde-azulado claro */
+  background: rgba(0, 0, 0, 0.1);
+  /* Fundo mais claro */
+  color: #32CD99;
+  /* Verde-azulado claro */
   padding: 12px 25px;
   margin: 10px;
   border-radius: 30px;
@@ -111,26 +125,33 @@ section {
   text-decoration: none;
   transition: all 0.3s ease-in-out;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(50, 205, 153, 0.3); /* Verde-azulado claro */
+  border: 1px solid rgba(50, 205, 153, 0.3);
+  /* Verde-azulado claro */
 }
 
-.header .cta:hover, .header .contato:hover, .header .sobre:hover {
-  background: rgba(0, 0, 0, 0.3); /* Fundo mais escuro */
-  color: #fff; /* Branco */
+.header .cta:hover,
+.header .contato:hover,
+.header .sobre:hover {
+  background: rgba(0, 0, 0, 0.3);
+  /* Fundo mais escuro */
+  color: #fff;
+  /* Branco */
   transform: scale(1.05);
 }
 
 /* Seção de Projetos */
 .projetos {
   padding: 60px 20px;
-  background-color: rgba(31, 40, 51, 0.8); /* Fundo mais claro com efeito fosco */
+  background-color: rgba(31, 40, 51, 0.8);
+  /* Fundo mais claro com efeito fosco */
   text-align: center;
 }
 
 .projetos h2 {
   font-family: "Agustina Regular", sans-serif;
   font-size: 2.5rem;
-  color: #32CD99; /* Verde-azulado claro */
+  color: #32CD99;
+  /* Verde-azulado claro */
   margin-bottom: 40px;
 }
 
@@ -142,25 +163,29 @@ section {
 }
 
 .galeria-projetos .projetos {
-  background: rgba(0, 0, 0, 0.1); /* Fundo mais claro */
+  background: rgba(0, 0, 0, 0.1);
+  /* Fundo mais claro */
   border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(50, 205, 153, 0.3); /* Verde-azulado claro */
+  box-shadow: 0 4px 20px rgba(0, 255, 170, 0.842);
+  /* Verde-azulado claro */
   padding: 25px;
   width: 320px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(50, 205, 153, 0.1); /* Verde-azulado claro */
+  border: 1px solid rgba(50, 205, 153, 0.1);
+  /* Verde-azulado claro */
 }
 
 .galeria-projetos .projetos:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 30px rgba(50, 205, 153, 0.5); /* Verde-azulado claro */
+  box-shadow: 0 8px 30px rgba(3, 245, 164, 0.945);
+  /* Verde-azulado claro */
 }
 
 .galeria-projetos .projetos img {
   width: 100%;
-  border-radius: 10px;
-  margin-bottom: 15px;
+  border-radius: 15px;
+  margin-bottom: 20px;
 }
 
 .galeria-projetos .projetos p {
@@ -178,7 +203,8 @@ section {
 .sobre h2 {
   font-family: "Agustina Regular", sans-serif;
   font-size: 2.5rem;
-  color: #32CD99; /* Verde-azulado claro */
+  color: #32CD99;
+  /* Verde-azulado claro */
   margin-bottom: 40px;
 }
 
@@ -196,7 +222,8 @@ section {
   width: 220px;
   height: 220px;
   object-fit: cover;
-  box-shadow: 0 4px 20px rgba(50, 205, 153, 0.3); /* Verde-azulado claro */
+  box-shadow: 0 4px 20px rgba(50, 205, 153, 0.3);
+  /* Verde-azulado claro */
 }
 
 .bio nav p {
@@ -207,19 +234,25 @@ section {
 
 /* Seção de Habilidades */
 .habilidades {
-  background: rgba(0, 0, 0, 0.05); /* Fundo mais claro */
+  background: rgba(0, 0, 0, 0.05);
+  /* Fundo mais claro */
   padding: 40px;
   border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(50, 205, 153, 0.3); /* Verde-azulado claro */
+  box-shadow: 0 4px 20px rgba(50, 205, 153, 0.3);
+  /* Verde-azulado claro */
   margin-top: 20px;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(50, 205, 153, 0.1); /* Verde-azulado claro */
+  border: 1px solid rgba(50, 205, 153, 0.1);
+  /* Verde-azulado claro */
+transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(3, 245, 164, 0.945);
 }
 
 .habilidades h3 {
   font-family: "Google Sans Regular", sans-serif;
   font-size: 2rem;
-  color: #32CD99; /* Verde-azulado claro */
+  color: #32CD99;
+  /* Verde-azulado claro */
 }
 
 .habilidades ul {
@@ -238,7 +271,8 @@ section {
 .contato h2 {
   font-family: "Agustina Regular", sans-serif;
   font-size: 2.5rem;
-  color: #32CD99; /* Verde-azulado claro */
+  color: #32CD99;
+  /* Verde-azulado claro */
   margin-bottom: 20px;
 }
 
@@ -265,7 +299,8 @@ section {
 }
 
 .footer .redes-sociais a {
-  color: #32CD99; /* Verde-azulado claro */
+  color: #32CD99;
+  /* Verde-azulado claro */
   margin: 0 10px;
   font-size: 1.1rem;
   text-decoration: none;
@@ -273,7 +308,8 @@ section {
 }
 
 .footer .redes-sociais a:hover {
-  color: #2E8B57; /* Verde-azulado escuro */
+  color: #2E8B57;
+  /* Verde-azulado escuro */
 }
 
 /* Media Queries para telas menores */
