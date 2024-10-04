@@ -34,7 +34,7 @@ Projetos
 - **JavaScript**: Para interatividade e funcionalidades dinâmicas.
 - **Font Awesome**: Para ícones e gráficos.
 - **Google Fonts**: Para tipografia moderna e legível.
--**React-Native**: aprendendo para programação móbile.
+- **React-Native**: aprendendo para programação móbile.
 
 ---
 
